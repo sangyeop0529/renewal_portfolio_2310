@@ -453,6 +453,7 @@ button:focus {
   position: relative;
   border-radius: 8px;
   overflow: hidden;
+  height: 250px;
 }
 
 .project__img {
@@ -696,6 +697,10 @@ button:focus {
 
   .projects {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project {
+    height: 180px;
   }
 
   .testimonial {
