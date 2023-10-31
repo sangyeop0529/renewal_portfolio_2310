@@ -1,33 +1,520 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="웹퍼블리셔용 델의 포트폴리오" />
-        <meta name="author" content="Dell" />
-        <title>Portfolio</title>
-        <!-- Favicon -->
-        <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-        <!-- OG -->
-        <meta property="og:title" content="델의 포트폴리오" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="" />
-        <meta property="og:image" content="" />
-        <!-- Pretendard Font -->
-        <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard-dynamic-subset.css" />
-        <!-- Font Awesome -->
-        <script src="https://kit.fontawesome.com/9eb162ac0d.js" crossorigin="anonymous"></script>
-        <!-- typeit -->
-        <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
-        <!-- Css -->
-        <link rel="stylesheet" href="./css/style.css" />
-        <!-- Javascript -->
-        <script type="module" src="js/main.js" defer></script>
-        <!-- <script type="module" src="js/projects.js" defer></script>
-        <script type="module" src="js/active_menu.js" defer></script>
-        <script type="module" src="js/type.js" defer></script> -->
-    </head>
-    <body>
-        123
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="웹퍼블리셔용 델의 포트폴리오" />
+    <meta name="author" content="Dell" />
+    <title>Portfolio</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <!-- OG -->
+    <meta property="og:title" content="델의 포트폴리오" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <!-- Pretendard Font -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard-dynamic-subset.css" />
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/9eb162ac0d.js" crossorigin="anonymous"></script>
+    <!-- Swiper Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- typeit -->
+    <script src="https://cdn.jsdelivr.net/npm/typeit@8.7.1/dist/index.umd.min.js"></script>
+    <!-- Css -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Javascript -->
+    <script type="module" src="js/main.js" defer></script>
+    <script type="module" src="js/menu.js" defer></script>
+    <script type="module" src="js/projects.js" defer></script>
+    <script src="./js/swiper.js" defer></script>
+    <!-- <script type="module" src="js/typeit.js" defer></script> -->
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__logo">
+        <h1 class="header__logo__title"><a href="#">Dell's Portfolio</a></h1>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li><a href="#home" class="header__menu__item active">Home</a></li>
+          <li><a href="#about" class="header__menu__item">About</a></li>
+          <li><a href="#skill" class="header__menu__item">Skill</a></li>
+          <li><a href="#work" class="header__menu__item">Work</a></li>
+          <li><a href="#experience" class="header__menu__item">Experience</a></li>
+          <li><a href="#contact" class="header__menu__item">contact</a></li>
+        </ul>
+      </nav>
+      <!-- 모바일 메뉴 -->
+      <button class="header__toggle" aria-label="navigation menu toggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </header>
+    <!-- Main -->
+    <main>
+      <!-- Home -->
+      <section id="home">
+        <div class="home__container">
+          <img class="home__avatar" src="./images/Profile.jpg" alt="델의 프로필사진" />
+          <h2 class="home__title" aria-label="웹퍼블리셔 이상엽">안녕하세요!<br />저는 <strong class="home__title--strong">꿈꾸는 웹퍼블리셔</strong> 이상엽입니다.</h2>
+          <p class="home__description">끈임없이 공부하며, 노력해가는 열정 가득한 코더!!</p>
+          <a class="home__contact" href="#contact">Contact Me</a>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="section max-container">
+        <h2 class="title">About me</h2>
+        <p class="description">
+          필요한 인재가 되기 위해<br />
+          <strong class="text--strong">배움과 경험</strong>을 중요시 하겠습니다.
+        </p>
+        <!-- Major -->
+        <ul class="majors">
+          <li class="major">
+            <i class="fa-brands fa-html5 major__icon" style="color: #ff651e"></i>
+            <p class="major__title">HTML</p>
+            <p class="major__description">웹표준에 맞는 레이아웃 구성을 탁월하게 만들어내며, 시멘틱태그 사용을 준수합니다.</p>
+          </li>
+          <li class="major">
+            <i class="fa-brands fa-css3-alt major__icon" style="color: #0065f4"></i>
+            <p class="major__title">CSS</p>
+            <p class="major__description">브라우져, 미디어크기에 맞게 설계 가능하며 다양한 스타일 구상 할 수 있습니다.</p>
+          </li>
+          <li class="major">
+            <i class="fa-brands fa-js major__icon" style="color: #ffdf00"></i>
+            <p class="major__title">JS</p>
+            <p class="major__description">기본문법 및 ES6 문법을 사용 할 수 있으며, 라이브러리 활용이 가능합니다.</p>
+          </li>
+          <li class="major">
+            <i class="fa-brands fa-react major__icon" style="color: #9563d2"></i>
+            <p class="major__title">React</p>
+            <p class="major__description">React의 사용법을 이해하고 있으며, Hooks 사용이 용이합니다.</p>
+          </li>
+        </ul>
+        <!-- Jobs -->
+        <ul class="jobs">
+          <li class="job">
+            <img src="images/jobs/megastudy.png" alt="google" />
+            <div>
+              <p class="job__name">메가스터디IT아카데미(강남)</p>
+              <p class="job__period">2022.05 ~ 2022.08</p>
+            </div>
+          </li>
+          <li class="job">
+            <img src="images/jobs/interwise.png" alt="google" />
+            <div>
+              <p class="job__name">인터와이즈</p>
+              <p class="job__period">2021.04 ~ 2022.05</p>
+            </div>
+          </li>
+          <li class="job">
+            <img src="images/jobs/green_com.png" alt="google" />
+            <div>
+              <p class="job__name">그린컴퓨터아카데미(서면)</p>
+              <p class="job__period">2020.11~ 2021.04</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Skill -->
+      <section id="skill" class="section">
+        <div class="max-container">
+          <h2 class="title">My Skills</h2>
+          <p class="description">기술 & 능력</p>
+          <div class="skills">
+            <section class="skills__coding">
+              <h3 class="skills__title">Coding Skills</h3>
+              <ul>
+                <li class="bar">
+                  <div class="bar__metadata"><span>HTML</span><span>100%</span></div>
+                  <div class="bar__bg"><div class="bar__value" style="width: 100%"></div></div>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata"><span>CSS</span><span>100%</span></div>
+                  <div class="bar__bg"><div class="bar__value" style="width: 100%"></div></div>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata"><span>Javascript</span><span>90%</span></div>
+                  <div class="bar__bg"><div class="bar__value" style="width: 90%"></div></div>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata"><span>React</span><span>70%</span></div>
+                  <div class="bar__bg"><div class="bar__value" style="width: 70%"></div></div>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata"><span>Vue</span><span>50%</span></div>
+                  <div class="bar__bg"><div class="bar__value" style="width: 50%"></div></div>
+                </li>
+              </ul>
+            </section>
+            <section class="skills__tools">
+              <h3 class="skills__title">Tools</h3>
+              <ul class="skills__tools__list">
+                <li class="skills__tools__item">
+                  <img src="./images/skills/photoshop.png" alt="포토샵" />
+                  <span>포토샵</span>
+                </li>
+                <li class="skills__tools__item">
+                  <img src="./images/skills/illustrator.png" alt="일러스트" />
+                  <span>일러스트</span>
+                </li>
+                <li class="skills__tools__item">
+                  <img src="./images/skills/sass.png" alt="scss" />
+                  <span>sass</span>
+                </li>
+                <li class="skills__tools__item">
+                  <img src="./images/skills/excel.png" alt="office" />
+                  <span>Ms office</span>
+                </li>
+              </ul>
+            </section>
+            <section class="skills__etc">
+              <h3 class="skills__title">Etc</h3>
+              <ul class="skills__tools__list">
+                <li class="skills__tools__item">
+                  <img src="./images/skills/travel.png" alt="여행" />
+                  <span>여행</span>
+                </li>
+                <li class="skills__tools__item">
+                  <img src="./images/skills/cooking.png" alt="요리" style="color: #fff" />
+                  <span>요리</span>
+                </li>
+                <li class="skills__tools__item">
+                  <img src="./images/skills/swimming.png" alt="수영" />
+                  <span>수영</span>
+                </li>
+                <li class="skills__tools__item">
+                  <img src="./images/skills/game.png" alt="게임" />
+                  <span>게임</span>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- Work -->
+      <section id="work" class="section">
+        <div class="max-container">
+          <h2 class="title">My work</h2>
+          <p class="description">Projects</p>
+          <ul class="categories">
+            <li>
+              <button class="category category--selected" data-category="all">All <span class="category__count">13</span></button>
+            </li>
+            <li>
+              <button class="category" data-category="career">Career <span class="category__count">7</span></button>
+            </li>
+            <li>
+              <button class="category" data-category="study">Study<span class="category__count">5</span></button>
+            </li>
+            <li>
+              <button class="category" data-category="design">Design<span class="category__count">1</span></button>
+            </li>
+          </ul>
+          <ul class="projects">
+            <li class="project" data-type="career">
+              <a href="http://geodaemaru.co.kr/" target="_blank">
+                <img class="project__img" src="images/projects/project1.jpg" alt="project1" />
+                <div class="project__metadata">
+                  <h3 class="project__title">거대마루</h3>
+                  <div>
+                    <p>참여 : 퍼블리싱 100%</p>
+                    <p>
+                      소개 : 바닥재의 색상이 잘 어울러진<br />
+                      고급스러운 디자인의 웹사이트
+                    </p>
+                    <p>기간 : 2 week</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="project" data-type="career">
+              <a href="http://geodaemaru.co.kr/" target="_blank">
+                <img class="project__img" src="images/projects/project2.webp" alt="project1" />
+                <div class="project__metadata">
+                  <h3 class="project__title">인블룸</h3>
+                  <div>
+                    <p>참여 : 퍼블리싱 100%</p>
+                    <p>
+                      소개 : cafe24 기반으로<br />
+                      만들어진 쇼핑몰
+                    </p>
+                    <p>기간 : 5 week</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="project" data-type="career">
+              <a href="http://p0116-0713a.interwise.co.kr/" target="_blank">
+                <img class="project__img" src="images/projects/project3.jpg" alt="project1" />
+                <div class="project__metadata">
+                  <h3 class="project__title">한국해양수산원</h3>
+                  <div>
+                    <p>참여 : 디자인 & 퍼블리싱 100%</p>
+                    <p>
+                      소개 : 블루계열의 컬러를 사용한<br />
+                      깔끔한 학회사이트
+                    </p>
+                    <p>기간 : 1 week</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="project" data-type="career">
+              <a href="http://ip-blue.com/index.php" target="_blank">
+                <img class="project__img" src="images/projects/project4.jpg" alt="project1" />
+                <div class="project__metadata">
+                  <h3 class="project__title">청어람 특허법률사무소</h3>
+                  <div>
+                    <p>참여 : 디자인 & 퍼블리싱 100%</p>
+                    <p>
+                      소개 : 블루계열의 컬러와<br />
+                      영문사이트를 별로 제작한 웹사이트
+                    </p>
+                    <p>기간 : 2 week</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="project" data-type="career">
+              <a href="http://firstel.co.kr/" target="_blank">
+                <img class="project__img" src="images/projects/project5.jpg" alt="project1" />
+                <div class="project__metadata">
+                  <h3 class="project__title">퍼스트일렉</h3>
+                  <div>
+                    <p>참여 : 디자인 & 퍼블리싱 100%</p>
+                    <p>
+                      소개 : 깔끔한 블랙과 레드 색상의<br />
+                      조화로 한번에 눈에 띄는 웹사이트
+                    </p>
+                    <p>기간 : 2 week</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="project" data-type="career">
+              <a href="http://ibigartcenter.com/" target="_blank">
+                <img class="project__img" src="images/projects/project6.jpg" alt="project1" />
+                <div class="project__metadata">
+                  <h3 class="project__title">아이빅아트센터</h3>
+                  <div>
+                    <p>참여 : 디자인 & 퍼블리싱 100%</p>
+                    <p>
+                      소개 : 입사 후 초창기에 만든<br />
+                      심플한 웹사이트
+                    </p>
+                    <p>기간 : 2 week</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="project" data-type="career">
+              <a href="http://nspower.kr/" target="_blank">
+                <img class="project__img" src="images/projects/project7.jpg" alt="project1" />
+                <div class="project__metadata">
+                  <h3 class="project__title">엔에스전력</h3>
+                  <div>
+                    <p>참여 : 디자인 & 퍼블리싱 100%</p>
+                    <p>
+                      소개 : 태양광이라는 소재와<br />
+                      어울리는 색상 및 디자인이 돋보이는 웹사이트
+                    </p>
+                    <p>기간 : 3 week</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="project" data-type="study">
+              <a href="http://sangyeop0529.dothome.co.kr/projects/starbuck/index.html" target="_blank">
+                <img class="project__img" src="images/projects/project8.jpg" alt="project1" />
+                <div class="project__metadata">
+                  <h3 class="project__title">스타벅스 클론코딩</h3>
+                  <div>
+                    <p>HTML, CSS, JS</p>
+                    <p>소개 : 스타벅스 메인페이지 클론코딩</p>
+                    <p>기간 : 패스트캠퍼스</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="project" data-type="study">
+              <a href="http://sangyeop0529.dothome.co.kr/projects/naver_order/docs/index.html" target="_blank">
+                <img class="project__img" src="images/projects/project9.jpg" alt="project1" />
+                <div class="project__metadata">
+                  <h3 class="project__title">네이버주문 클론코딩</h3>
+                  <div>
+                    <p>HTML, CSS, JS</p>
+                    <p>소개 : 네이버주문 모바일 클론코딩</p>
+                    <p>기간 : 제로베이스</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="project" data-type="study">
+              <a href="http://sangyeop0529.dothome.co.kr/projects/jwhotel/index.html" target="_blank">
+                <img class="project__img" src="images/projects/project10.jpg" alt="project1" />
+                <div class="project__metadata">
+                  <h3 class="project__title">서울메리어트호텔 리뉴얼</h3>
+                  <div>
+                    <p>참여 : 디자인 & 퍼블리싱 100%</p>
+                    <p>
+                      소개 : 기존사이트를 나만의 방식으로<br />
+                      리뉴얼한 웹사이트
+                    </p>
+                    <p>기간 : 5 day</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="project" data-type="study">
+              <a href="http://sangyeop0529.dothome.co.kr/projects/hasandong/index.html" target="_blank">
+                <img class="project__img" src="images/projects/project11.jpg" alt="project1" />
+                <div class="project__metadata">
+                  <h3 class="project__title">하삼동커피 리뉴얼</h3>
+                  <div>
+                    <p>참여 : 디자인 & 퍼블리싱 100%</p>
+                    <p>
+                      소개 : 기존사이트를 나만의 방식으로<br />
+                      리뉴얼한 웹사이트
+                    </p>
+                    <p>기간 : 4 day</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="project" data-type="study">
+              <a href="http://sangyeop0529.dothome.co.kr/projects/porsche/index.html" target="_blank">
+                <img class="project__img" src="images/projects/project12.jpg" alt="project1" />
+                <div class="project__metadata">
+                  <h3 class="project__title">포르쉐코리아 리뉴얼</h3>
+                  <div>
+                    <p>참여 : 디자인 & 퍼블리싱 100%</p>
+                    <p>
+                      소개 : 기존사이트를 나만의 방식으로<br />
+                      리뉴얼한 웹사이트
+                    </p>
+                    <p>기간 : 3 day</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="project" data-type="design">
+              <a href="http://www.dootrader.kr/" target="_blank">
+                <img class="project__img" src="images/projects/project13.jpg" alt="project1" />
+                <div class="project__metadata">
+                  <h3 class="project__title">두프라임 랜딩페이지</h3>
+                  <div>
+                    <p>참여 : 디자인 & 퍼블리싱 100%</p>
+                    <p>오징어게임을 오마주한듯한 랜딩페이지</p>
+                    <p>기간 : 3 day</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="section max-container">
+        <h2 class="title">Experience</h2>
+        <p class="description">그 밖에 많은 다양한 경험과 활동</p>
+
+        <!-- Slider main container -->
+        <div class="experience-wrapper">
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="experience__container swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <figure>
+                  <img class="experience__img" src="/images/experiance/experiance1.jpg" alt="해양대 사회복무요원시절" />
+                </figure>
+                <div class="experience__container">
+                  <p class="experience__title">국제대학 우수 사회복무요원</p>
+                  <p class="experience__text">해양대학교 국제대학 행정실에서 2년간 사회복무요원으로 복무했습니다. 그곳에서 많은 행정업무 및 행사방법을 익혀 엑셀 사용에 능숙하며, 성실함을 인정받아 전역 당시 국제대학 학장님께 상장을 수여 받았습니다.</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <figure>
+                  <img class="experience__img" src="/images/experiance/experiance2.jpg" alt="일본워킹홀리데이" />
+                </figure>
+                <div class="experience__container">
+                  <p class="experience__title">일본 워킹홀리데이</p>
+                  <p class="experience__text">일본 워킹홀리데이로 일본을 간 후 Akaimonkai라는 어학교에서 6개월간 공부를 하며, 일본어를 공부하고 외국인친구들과 교우를 쌓았으며, 아르바이트를 착실히하며 생계를 유지하는 생활력을 익혔습니다.</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <figure>
+                  <img
+                    class="experience__img"
+                    src="/images/experiance/experiance3.jpg"
+                    alt="필리핀 어학연수
+                  " />
+                </figure>
+                <div class="experience__container">
+                  <p class="experience__title">필리핀 어학연수</p>
+                  <p class="experience__text">영어를 공부하고자는 마음에 두려워하지 않고 5개월간 필리핀 어학연수를 다녀왔습니다. 20년간 영어를 싫어했지만 21세기 살아가기 위해 영어는 필수인 만큼 기초부터 탄탄히 배웠으며, 무엇보다도 외국인을 상대로 대화하기 두려워하는 마음을 없앨 수 있는 좋은 계기가 되었습니다.</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <figure>
+                  <img class="experience__img" src="/images/experiance/experiance4.jpg" alt="일본인친구들과의 여행" />
+                </figure>
+                <div class="experience__container">
+                  <p class="experience__title">외국인 친구들과의 여행</p>
+                  <p class="experience__text">일본, 필리핀, 호주에서 생활하면서 많은 외국인 친구들을 만나왔으며, 같이 여행을 떠날정도로 좋은 교우활동을 하였습니다. 지금까지도 몇몇의 외국인 친구들과 연락을 하며, 원만한 관계를 유지하고 있습니다.</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <figure>
+                  <img class="experience__img" src="/images/experiance/experiance5.jpg" alt="일본인친구들과의 여행" />
+                </figure>
+                <div class="experience__container">
+                  <p class="experience__title">마지막 호주생활</p>
+                  <p class="experience__text">코로나19로 인해 4개월이라는 짧은 생활을 하였지만, 아르바이트, 공부를 병행하고 그 나라의 행사에 많이 참석하여 새로운 경험을 하였습니다. 특히, 이성애자 페스티벌인 '레인보우 페스티벌'을 그 나라의 평등한 시선에 감명을 받았습니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="experience-btn experience-prev"><i class="fa-solid fa-chevron-left"></i></div>
+          <div class="experience-btn experience-next"><i class="fa-solid fa-chevron-right"></i></div>
+        </div>
+      </section>
+
+      <!-- Arrow up -->
+      <aside>
+        <a class="arrow-up" href="#home" title="back to top">
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="section">
+      <div class="max-container">
+        <h2 class="title">Contact Me</h2>
+        <p class="description">sangyeop0529@naver.com</p>
+        <ul class="contact__links">
+          <li>
+            <a class="contact__link" href="https://github.com/sangyeop0529?tab=repositories" target="_blank" title="my github link">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a class="contact__link" href="tel:010-4147-2234" title="my tell-phone ">
+              <i class="fa-solid fa-square-phone"></i>
+            </a>
+          </li>
+        </ul>
+        <p>ⓒ2023 sangyeop0529 - All rights reserved</p>
+      </div>
+    </footer>
+  </body>
 </html>
