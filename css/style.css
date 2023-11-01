@@ -386,6 +386,23 @@ button:focus {
 .bar__value {
   height: 3px;
   background-color: var(--color-accent);
+  width: 0;
+  transition: width 1000ms ease-in;
+}
+
+.increase.per_100 {
+  width: 100%;
+}
+
+.increase.per_90 {
+  width: 90%;
+}
+
+.increase.per_70 {
+  width: 70%;
+}
+.increase.per_50 {
+  width: 50%;
 }
 
 /* Work */

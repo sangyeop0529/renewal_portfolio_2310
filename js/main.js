@@ -39,3 +39,22 @@ navbarToggle.addEventListener("click", () => {
 navbarMenu.addEventListener("click", () => {
   navbarMenu.classList.remove("open");
 });
+
+const skill = document.querySelector("#skill");
+const skillTop = skill.offsetTop;
+const about = document.querySelector("#about");
+const aboutTop = about.offsetTop;
+document.addEventListener("scroll", () => {
+  const skillBar = document.querySelectorAll(".bar__value");
+  console.log(skillTop);
+  console.log("탑은", skillTop / window.scrollY);
+  if (1.5 > skillTop / window.scrollY) {
+    skillBar.forEach((list) => {
+      list.classList.add("increase");
+    });
+  } else if (1.5 < aboutTop / window.scrollY) {
+    skillBar.forEach((list) => {
+      list.classList.remove("increase");
+    });
+  }
+});

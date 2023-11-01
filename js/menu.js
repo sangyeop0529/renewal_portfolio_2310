@@ -3,6 +3,7 @@
 const sectionIds = ["#home", "#about", "#skill", "#work", "#experience", "#contact"];
 const sections = sectionIds.map((id) => document.querySelector(id));
 const navItems = sectionIds.map((id) => document.querySelector(`[href="${id}"]`));
+
 const visibleSections = sectionIds.map(() => {
   false;
 });
